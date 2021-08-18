@@ -1,12 +1,12 @@
 import os
 
-from flask import Flask, render_template
+from flask import Flask, render_template,jsonify
 
 app = Flask(__name__)
 
 @app.route('/<id>')
 def hello_world(id):
-    return 100+2
+    return jsonify(100+2)
 
 
 if __name__ == "__main__":
